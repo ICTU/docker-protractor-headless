@@ -1,11 +1,10 @@
 FROM node:6.9.4-slim
-MAINTAINER j.ciolek@webnicer.com
+MAINTAINER frank.niessink@ictu.nl
 WORKDIR /tmp
 COPY webdriver-versions.js ./
 ENV CHROME_PACKAGE="google-chrome-stable_59.0.3071.115-1_amd64.deb" NODE_PATH=/usr/local/lib/node_modules:/protractor/node_modules
 RUN npm install -g protractor@5.3.0 minimist@1.2.0 && \
     node ./webdriver-versions.js --chromedriver 2.38 && \
-    webdriver-manager update && \
     echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/sources.list && \
     apt-get update && \
     apt-get install -y xvfb wget sudo && \
