@@ -26,7 +26,7 @@ Please note that chrome57 is not available, as it does not work reliably with Pt
 
 The image in the latest version contains the following packages in their respective versions:
 
-* Chrome - 59
+* Chrome - 67
 * Protractor - 5.3.0
 * Node.js - 6.9.4
 * Chromedriver - 2.38

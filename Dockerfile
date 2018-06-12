@@ -2,7 +2,7 @@ FROM node:6.9.4-slim
 MAINTAINER frank.niessink@ictu.nl
 WORKDIR /tmp
 COPY webdriver-versions.js ./
-ENV CHROME_PACKAGE="google-chrome-stable_59.0.3071.115-1_amd64.deb" NODE_PATH=/usr/local/lib/node_modules:/protractor/node_modules
+ENV CHROME_PACKAGE="google-chrome-stable_67.0.3396.79-1_amd64.deb" NODE_PATH=/usr/local/lib/node_modules:/protractor/node_modules
 RUN npm install -g protractor@5.3.0 minimist@1.2.0 && \
     node ./webdriver-versions.js --chromedriver 2.38 && \
     webdriver-manager update --versions.chrome 2.38 && \
